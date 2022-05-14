@@ -1,0 +1,9 @@
+.gyro-input {
+  display: flex;
+  align-items: center;
+}
+
+.gyro-input input {
+  display: inline-block;
+  margin-left: 8px;
+}
