@@ -5,7 +5,7 @@ import NetworkTables from './networktables';
 function useEntry(key, defaultValue) {
   const [value, setValue] = useState(defaultValue);
   const updateNtValue = useCallback(newValue => {
-    console.log('...', key, newValue);
+    // console.log('...', key, newValue);
     NetworkTables.setValue(key, newValue);
   }, []);
 

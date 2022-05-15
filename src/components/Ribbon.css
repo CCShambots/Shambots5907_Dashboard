@@ -1,0 +1,29 @@
+.ribbbon {
+    height:10%;
+    width: 100%;
+
+}
+
+.logo {
+    max-width: 10%;
+    size: auto;
+    float: right;
+    padding: 10px;
+}
+
+li {
+    color:white;
+    font-size: 40px;
+    float:left;
+    margin:10px;
+    padding:10px;
+}
+
+li:hover {
+    opacity: 50%;
+}
+
+.tabs {
+    display: inline;
+    list-style: none;
+}
