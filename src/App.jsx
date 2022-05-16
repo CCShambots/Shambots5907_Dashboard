@@ -6,6 +6,8 @@ import ConnectionWarning from './components/ConnectionWarning.jsx';
 import React, {Component} from 'react';
 import './App.css';
 import Ribbon from './components/Ribbon';
+import AutonomousPage from './components/AutonomousPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
       <ConnectionWarning/>
 
       <Ribbon tab={activeTab} setTab={(tab) => setActiveTab(tab)} tabs={tabNames}/>
+
+      <AutonomousPage activeTab={activeTab}/>
       
     </div>
   );

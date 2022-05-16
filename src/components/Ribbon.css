@@ -1,7 +1,6 @@
 .ribbbon {
-    height:10%;
+    height: 50px;
     width: 100%;
-
 }
 
 .logo {
@@ -17,13 +16,27 @@ li {
     float:left;
     margin:10px;
     padding:10px;
+    user-select: none;
 }
 
-li:hover {
+#inactive:hover {
     opacity: 50%;
+}
+
+#active {
+    color: #004f9e;
+    text-shadow: -1px 1px 2px rgb(255, 255, 255),
+        1px 1px 2px rgb(255, 255, 255),
+        1px -1px 0 rgb(255, 255, 255),
+        -1px -1px 0 rgb(255, 255, 255); 
 }
 
 .tabs {
     display: inline;
     list-style: none;
+}
+
+hr {
+    width:100%;
+    
 }
