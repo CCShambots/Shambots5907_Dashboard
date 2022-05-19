@@ -1,0 +1,55 @@
+.box {
+    background-color: white;
+}
+
+.title {
+    color: white;
+    margin-bottom: 2px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.selectionContainer {
+    padding: 5px 5px 5px 15px;
+}
+
+.normalText {
+    color: #333333;
+    display: inline-block;
+    margin: auto;   
+    font-size: 15px;
+    
+    pointer-events: none;
+    user-select: none;
+}
+
+.arrow {
+    display:inline-block;
+
+    width: 30px;
+    height:auto;
+    user-select: none;
+}
+
+.horizontalArrow {
+    transform: rotate(-90deg);
+}
+
+.root {
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.selectionOptions {
+    list-style: none;
+    display: block;
+}
+
+.option {
+    /*display:block;*/
+    padding: 0;
+    clear:both;
+    border: 5px solid red;
+}
+

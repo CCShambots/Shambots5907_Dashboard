@@ -1,4 +1,4 @@
-import NetworkTables from '../networktables/networktables';
+import NetworkTables from '../../networktables/networktables';
 import React, { Component } from 'react';
 import './ConnectionWarning.css'
 
@@ -25,8 +25,9 @@ class ConnectionWarning extends React.Component {
         const visible = this.state.connected ? 'hidden' : 'visible';
 
         return(
-            <div className="connection-warning" style={{visibility: visible}}>
-              <h1 className="warning-text" style= {{color: 'red', fontSize: '100px'}}> NT DISCONNECTED </h1>
+            <div style={{zIndex:2, visibility: visible}}>
+              <div className="background"/>
+              <h1 className="warning-text" style= {{color: 'red', fontSize: '100px'}}><b>NT DISCONNECTED</b></h1>
             </div> 
         )
     }

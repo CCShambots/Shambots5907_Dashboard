@@ -1,0 +1,16 @@
+.buttonBox {
+    border: 7px solid;
+    display: inline-block;
+
+    position:relative;
+}
+
+.red {
+    background-color: #991919;
+    border-color: #732626;
+}
+
+.green {
+    background-color: #22933b;
+    border-color: #266e37;
+}
