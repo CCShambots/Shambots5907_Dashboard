@@ -1,6 +1,4 @@
 import React, {Component} from "react";
-import useEntry from "../../networktables/useEntry";
-import { Dropdown, Select } from "semantic-ui-react";
 import './SendableChooser.css';
 import arrow from '../../images/dropdown-arrow.png'
 
@@ -17,25 +15,30 @@ class SendableChooser extends Component {
         
         const selectionOptions = this.props.options.map((option) => 
             <li key={option} className={"option"}>
-                <div className={"box"} onClick={() => {
-                    this.props.setActiveSelection(option);
+                <div className={"box"}  onClick={() => {
+                    this.props.setSelection(option);
                     this.setState({dropDownActive: false})
                 }}>
                     <div className={"selectionContainer"}>
-                        <p className={"normalText"}>{option}</p>
+                        <p className={"normalText"} style={{width: '125px'}}>{option}</p>
                     </div>    
                 </div>
             </li>
         );
-        
+
+        const sentToDashboard = this.props.active == this.props.selected ? true : false;
+
         return(
             <div className={"root"}>
-                <p className={"title"}>{this.props.name}</p>
-                <div className={"box"} onClick={() => this.setState({dropDownActive: !this.state.dropDownActive})}>
-                    <div className={"selectionContainer"}>
-                        <p className={"normalText"}>{this.props.active}</p>
-                        <img className={"arrow, horizontalArrow"} src={arrow}/>
+                <p className={"title"}><b>{this.props.name}</b></p>
+                <div>
+                    <div className={"box"} onClick={() => this.setState({dropDownActive: !this.state.dropDownActive})}>
+                        <div className={"selectionContainer"}>
+                            <p className={"normalText inlineText"}>{this.props.selected}</p>
+                            <img className={"arrow"} id={this.state.dropDownActive ? "horizontalArrow" : "normalArrow"} src={arrow}/>
+                        </div>
                     </div>
+                    <p className={'title, sentIndicator'} id={sentToDashboard ? "" : "notSent"}>{sentToDashboard ? "✅" : "!"}</p>
                 </div>
                 <div style={{visibility: this.state.dropDownActive ? 'visible' : 'hidden'}}>
                     <ul className={"selectionOptions"}>

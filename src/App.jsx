@@ -21,7 +21,7 @@ function App() {
     }));
   }, true);
 
-  const [activeTab, setActiveTab] = useEntry('/dashboard/tab', 'Autonomous');
+  const [activeTab, setActiveTab] = useEntry('/dashboard/tab', 'Auto');
 
   const tabNames = ['Auto', 'Teleop', 'Test'];
 

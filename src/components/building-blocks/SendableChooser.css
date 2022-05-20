@@ -1,5 +1,6 @@
 .box {
     background-color: white;
+    display: inline-block;
 }
 
 .title {
@@ -15,24 +16,34 @@
 
 .normalText {
     color: #333333;
-    display: inline-block;
-    margin: auto;   
+    margin: auto;
     font-size: 15px;
+
+    width: 125px;
     
     pointer-events: none;
     user-select: none;
 }
 
+.inlineText {
+    display:inline-block
+}
+
 .arrow {
     display:inline-block;
-
     width: 30px;
     height:auto;
     user-select: none;
+
+    transform: translate(100%, 0);
 }
 
-.horizontalArrow {
+#horizontalArrow {
     transform: rotate(-90deg);
+}
+
+#normalArrow {
+    transform: rotate(0deg);
 }
 
 .root {
@@ -41,15 +52,26 @@
     flex-direction: column;
 }
 
+.sentIndicator {
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 0px;
+    transform: translate(0, 15%);
+}
+
+#notSent {
+    font-weight: bold;
+    color: red;
+}
+
 .selectionOptions {
     list-style: none;
-    display: block;
+    margin-left: -2em;
+    width: 125px;
 }
 
 .option {
-    /*display:block;*/
+    display: block;
     padding: 0;
-    clear:both;
-    border: 5px solid red;
 }
 
