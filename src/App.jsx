@@ -9,6 +9,7 @@ import Ribbon from './components/pages/Ribbon';
 import PageAutonomous from './components/pages/PageAutonomous';
 import PageTeleop from './components/pages/PageTeleop';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Debug from "./components/pages/Debug";
 
 
 function App() {
@@ -23,17 +24,18 @@ function App() {
 
   const [activeTab, setActiveTab] = useEntry('/dashboard/tab', 'Auto');
 
-  const tabNames = ['Auto', 'Teleop', 'Test'];
+  const tabNames = ['Auto', 'Teleop', 'Test', 'Debug'];
 
   return (
     <div className="App">
       
-      <ConnectionWarning/>
+        <ConnectionWarning/>
 
-      <Ribbon tab={activeTab} setTab={(tab) => setActiveTab(tab)} tabs={tabNames}/>
+        <Ribbon tab={activeTab} setTab={(tab) => setActiveTab(tab)} tabs={tabNames}/>
 
-      <PageAutonomous activeTab={activeTab}/>
-      <PageTeleop activeTab={activeTab}/>
+        <PageAutonomous activeTab={activeTab}/>
+        <PageTeleop activeTab={activeTab}/>
+        <Debug activeTab={activeTab}></Debug>
     </div>
   );
 }
