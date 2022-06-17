@@ -10,6 +10,7 @@ import PageAutonomous from './components/pages/PageAutonomous';
 import PageTeleop from './components/pages/PageTeleop';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Debug from "./components/pages/Debug";
+import PurePursuit from "./components/pages/PurePursuit";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
 
   const [activeTab, setActiveTab] = useEntry('/dashboard/tab', 'Auto');
 
-  const tabNames = ['Auto', 'Teleop', 'Test', 'Debug'];
+  const tabNames = ['Auto', 'Teleop', 'Test', 'Debug', 'Pathing'];
 
   return (
     <div className="App">
@@ -36,6 +37,7 @@ function App() {
         <PageAutonomous activeTab={activeTab}/>
         <PageTeleop activeTab={activeTab}/>
         <Debug activeTab={activeTab}></Debug>
+        <PurePursuit activeTab={activeTab}></PurePursuit>
     </div>
   );
 }

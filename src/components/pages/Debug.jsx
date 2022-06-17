@@ -10,11 +10,11 @@ function Debug(props) {
     if(props.activeTab == "Debug") {
         return (
             <div>
-                <p>{name}</p>
                 <table>
-                    <tr><td>Name</td><td>Current</td><td>Parent</td><td>Desired</td><td>Flag</td><td>Transitioning</td></tr>
-                    <Subsystem name={"example"}></Subsystem>
-                    {/*<Subsystem name={"example2"}></Subsystem>*/}
+                    <thead><tr><td>Name</td><td>Current</td><td>Parent</td><td>Desired</td><td>Flag</td><td>Transitioning</td></tr></thead>
+                    <tbody>
+                        <Subsystem name={"example"}></Subsystem>
+                    </tbody>
                 </table>
             </div>
         )
