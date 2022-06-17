@@ -3,8 +3,7 @@ import React from "react";
 import './Subsystem.css'
 
 function Subsystem(props) {
-    const baseEntry = "/SmartDashboard/subsystems/" + props.name + "/";
-    console.log(baseEntry);
+    const baseEntry = "/SmartDashboard/" + props.name + "/";
 
     const [name] = useEntry(baseEntry + "Name", "NOT FOUND");
     const [state] = useEntry(baseEntry + "Current State", "NOT FOUND");
@@ -12,8 +11,6 @@ function Subsystem(props) {
     const [desiredState] = useEntry(baseEntry + "Desired State", "NOT FOUND");
     const [flagState] = useEntry(baseEntry + "Current Flag State", "NOT FOUND");
     const [transitioning] = useEntry(baseEntry + "Transitioning", true);
-
-    console.log(name);
 
     return(
         <tr className={"info"}>
