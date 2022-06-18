@@ -2,16 +2,16 @@ import React, {useEffect, useRef, useState} from "react";
 import "./PathingDisplay.css";
 import useEntry from "../../networktables/useEntry";
 
-//TODO: Remember that points and robot pose comes in meters (and possibly follow distance too)
-
 function PathingDisplay(props) {
     const baseEntry = "/SmartDashboard/drivetrain/"
-    const [pointsX, setPointsX] = useEntry(baseEntry + "Pure Pursuit/xPoints", []);
-    const [pointsY, setPointsY] = useEntry(baseEntry + "Pure Pursuit/yPoints", []);
+    const [pointsX] = useEntry(baseEntry + "Pure Pursuit/xPoints", []);
+    const [pointsY] = useEntry(baseEntry + "Pure Pursuit/yPoints", []);
 
     const [robotX] = useEntry(baseEntry + "pose/x", 0);
     const [robotY] = useEntry(baseEntry + "pose/y", 0);
     const [robotTheta] = useEntry(baseEntry + "pose/theta", 0);
+
+    const [followDistance] = useEntry(baseEntry + "Pure Pursuit/followDistance", 0)
 
     console.log([pointsX, pointsY]);
 
@@ -30,7 +30,7 @@ function PathingDisplay(props) {
     const pointElements = getPoints(points, width, height);
 
     const botPose = {x: feet(robotX), y: feet(robotY), theta: degrees(robotTheta)}
-    const followRadius = 0.75;
+    const followRadius = followDistance;
     const botSize = {length: 26./12, width: 26./12}
 
     const bot = getBotDisplay(botPose, botSize, followRadius, width, height);
@@ -124,9 +124,9 @@ function displayHistoryPoints(history, width, height) {
 }
 
 function move(point, angle, unit) {
-    var x = point.x;
-    var y = point.y;
-    var rad = radians(angle % 360);
+    let x = point.x;
+    let y = point.y;
+    let rad = radians(angle % 360);
 
     x += unit*Math.sin(rad);
     y += unit*Math.cos(rad);
