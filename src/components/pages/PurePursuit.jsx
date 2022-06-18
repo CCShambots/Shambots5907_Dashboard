@@ -23,15 +23,9 @@ class PurePursuit extends Component {
 
     handleLoad() {
         this.setState({
-            show : true
+            show: true
         })
     }
-
-    // componentDidMount() {
-    //     this.setState({
-    //         show : true
-    //     })
-    // }
 
     render() {
         if(this.props.activeTab == 'Pathing') {
@@ -42,6 +36,7 @@ class PurePursuit extends Component {
                 </div>
             )
         } else {
+            this.setState({show: false})
             return (
                 <div>
                 </div>

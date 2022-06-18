@@ -25,7 +25,7 @@ class ConnectionWarning extends React.Component {
         const visible = this.state.connected ? 'hidden' : 'visible';
 
         return(
-            <div style={{zIndex:2, visibility: visible}}>
+            <div style={{zIndex:100, visibility: visible}}>
               <div className="background"/>
               <h1 className="warning-text" style= {{color: 'red', fontSize: '100px'}}><b>NT DISCONNECTED</b></h1>
             </div> 

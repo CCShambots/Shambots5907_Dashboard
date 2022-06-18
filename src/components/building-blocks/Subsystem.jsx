@@ -11,6 +11,7 @@ function Subsystem(props) {
     const [desiredState] = useEntry(baseEntry + "Desired State", "NOT FOUND");
     const [flagState] = useEntry(baseEntry + "Current Flag State", "NOT FOUND");
     const [transitioning] = useEntry(baseEntry + "Transitioning", true);
+    const [enabled] = useEntry(baseEntry + "Enabled", true);
 
     return(
         <tr className={"info"}>
@@ -20,6 +21,7 @@ function Subsystem(props) {
             <td className={"element"}>{desiredState}</td>
             <td className={"element"}>{flagState}</td>
             <td className={"element"}>{transitioning ? "true" : "false"}</td>
+            <td className={"element"}>{enabled ? "true" : "false"}</td>
         </tr>
     )
 }
