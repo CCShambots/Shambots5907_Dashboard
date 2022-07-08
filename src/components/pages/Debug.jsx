@@ -12,7 +12,7 @@ function Debug(props) {
                 <table>
                     <thead><tr><td>Name</td><td>Current</td><td>Parent</td><td>Desired</td><td>Flag</td><td>Transitioning</td><td>Enabled</td></tr></thead>
                     <tbody>
-                        <Subsystem name={"drivetrain"}></Subsystem>
+                        <Subsystem name={"Lights"}></Subsystem>
                     </tbody>
                 </table>
             </div>

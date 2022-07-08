@@ -2,6 +2,7 @@ import TrueFalseButton from "../building-blocks/TrueFalseButton";
 import RPMMonitor from "../specific-components/RPMMonitor";
 import useEntry from "../../networktables/useEntry";
 import './PageTeleop.css';
+import StatusLight from "../building-blocks/StatusLight";
 
 
 function PageTeleop(props) {
@@ -9,6 +10,7 @@ function PageTeleop(props) {
     const boxSize = '120px';
 
     const [ballCount] = useEntry("/SmartDashboard/Number of balls tracking", -1);
+    const [lightStatus] = useEntry("/SmartDashboard/Lights/Current State", "Undetermined");
 
     if(props.activeTab == "Teleop") {
         return (
@@ -25,6 +27,9 @@ function PageTeleop(props) {
                     <RPMMonitor size={boxSize}></RPMMonitor>
                     <RPMMonitor size={boxSize}></RPMMonitor>
                 </div>
+
+                <StatusLight lightStatus={lightStatus} ballCount={ballCount}></StatusLight>
+
             </div>
         )
     } else {
