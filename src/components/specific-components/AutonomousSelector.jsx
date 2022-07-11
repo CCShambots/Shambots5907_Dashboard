@@ -1,9 +1,9 @@
 import useEntry from "../../networktables/useEntry";
-import SendableChooser from "../building-blocks/SendableChooser";
+import SendableChooser from "../general-components/SendableChooser";
 
 function AutonomousSelector(props) {
 
-    const pathToSelector = "/Shuffleboard/Drive Team/Select Autonomous Route/";
+    const pathToSelector = "/SmartDashboard/Select Autonomous Route/";
 
     const [defaultSelection] = useEntry(pathToSelector + "/default", '');
     const [activeValue] = useEntry(pathToSelector + 'active', ''); //Active property is the value in the robot code

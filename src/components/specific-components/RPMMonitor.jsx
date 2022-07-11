@@ -1,4 +1,4 @@
-import TrueFalseButton from "../building-blocks/TrueFalseButton";
+import TrueFalseButton from "../general-components/TrueFalseButton";
 import useEntry from "../../networktables/useEntry";
 import './RPMMonitor.css'
 

@@ -1,7 +1,7 @@
 import React from "react";
-import Subsystem from "../building-blocks/Subsystem";
+import Subsystem from "../general-components/Subsystem";
 import './Debug.css'
-import useEntry from "../../networktables/useEntry";
+import ConveyorDisplay from "../specific-components/conveyor/ConveyorDisplay";
 
 function Debug(props) {
 
@@ -13,8 +13,11 @@ function Debug(props) {
                     <thead><tr><td>Name</td><td>Current</td><td>Parent</td><td>Desired</td><td>Flag</td><td>Transitioning</td><td>Enabled</td></tr></thead>
                     <tbody>
                         <Subsystem name={"Lights"}></Subsystem>
+                        <Subsystem name={"conveyor"}></Subsystem>
                     </tbody>
                 </table>
+                <ConveyorDisplay/>
+
             </div>
         )
     } else {

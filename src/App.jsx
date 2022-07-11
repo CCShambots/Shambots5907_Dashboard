@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import KeyValueTable from './components/building-blocks/KeyValueTable';
+import KeyValueTable from './components/general-components/KeyValueTable';
 import useGlobalListener from './networktables/useGlobalListener';
 import useEntry from './networktables/useEntry';
 import ConnectionWarning from './components/pages/ConnectionWarning.jsx';
@@ -23,7 +23,7 @@ function App() {
     }));
   }, true);
 
-  const [activeTab, setActiveTab] = useEntry('/dashboard/tab', 'Auto');
+  const [activeTab, setActiveTab] = useEntry('/SmartDashboard/Tab', 'Auto');
 
   const tabNames = ['Auto', 'Teleop', 'Test', 'Debug', 'Pathing'];
 

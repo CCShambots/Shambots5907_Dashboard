@@ -15,11 +15,11 @@ class SendableChooser extends Component {
         
         const selectionOptions = this.props.options.map((option) => 
             <li key={option} className={"option"}>
-                <div className={"box"}  onClick={() => {
-                    this.props.setSelection(option);
-                    this.setState({dropDownActive: false})
-                }}>
-                    <div className={"selectionContainer"}>
+                <div className={"box"}>
+                    <div onClick={() => {
+                        this.props.setSelection(option);
+                        this.setState({dropDownActive: false})
+                    }} className={"selectionContainer"}>
                         <p className={"normalText"} style={{width: '125px'}}>{option}</p>
                     </div>    
                 </div>

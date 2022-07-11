@@ -1,8 +1,8 @@
-import TrueFalseButton from "../building-blocks/TrueFalseButton";
+import TrueFalseButton from "../general-components/TrueFalseButton";
 import RPMMonitor from "../specific-components/RPMMonitor";
 import useEntry from "../../networktables/useEntry";
 import './PageTeleop.css';
-import StatusLight from "../building-blocks/StatusLight";
+import StatusLight from "../specific-components/status-lights/StatusLight";
 
 
 function PageTeleop(props) {

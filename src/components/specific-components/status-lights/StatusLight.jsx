@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import LightDisplay from "./LightDisplay";
 import "./StatusLight.css";
-import Image from "../../images/blank.png"
+import Image from "../../../images/blank.png"
 
 class StatusLight extends Component {
 
@@ -29,7 +29,7 @@ class StatusLight extends Component {
     render() {
         return (
             <div className={"container"}>
-                <img className={"reference-image"} onLoad={this.handleLoad} ref={this.sizeRef} src={Image} />
+                <img className={"blank-reference-image"} onLoad={this.handleLoad} ref={this.sizeRef} src={Image} />
                 {this.renderDisplay()}
             </div>
         )

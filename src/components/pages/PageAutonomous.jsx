@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import useEntry from "../../networktables/useEntry";
-import SendableChooser from "../building-blocks/SendableChooser";
+import SendableChooser from "../general-components/SendableChooser";
 import AutonomousSelector from "../specific-components/AutonomousSelector";
 
 function PageAutonomous(props) {

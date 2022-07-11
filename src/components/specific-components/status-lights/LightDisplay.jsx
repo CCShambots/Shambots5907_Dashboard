@@ -45,7 +45,7 @@ class LightDisplay extends React.Component{
                     return <rect displayName="locked-in-no-ball"/>
                 }
             case "BottomEject":
-                return <StrobeAnimation displayName="bottom-eject" speed={this.state.rate / 4} width={this.props.width} height={this.props.height} color={"blue"} updateRate={this.state.updateRate} />
+                return <StrobeAnimation displayName="bottom-eject" speed={this.state.rate / 4} width={this.props.width} height={this.props.height} color={"red"} updateRate={this.state.updateRate} />
             case "Testing":
                 return <StrobeAnimation displayName="testing" speed={this.state.rate} width={this.props.width} height={this.props.height} color={"yellow"} updateRate={this.state.updateRate} />
         }

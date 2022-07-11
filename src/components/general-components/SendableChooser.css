@@ -2,12 +2,6 @@
     padding: 10px;
     display: inline-flex;
     flex-direction: column;
-    /*justify-content: flex-start;*/
-}
-
-.box {
-    background-color: white;
-    display: inline-block;
 }
 
 .title {
@@ -15,10 +9,6 @@
     margin-bottom: 2px;
     text-align: center;
     pointer-events: none;
-}
-
-.selectionContainer {
-    padding: 5px 5px 5px 15px;
 }
 
 .normalText {
@@ -46,13 +36,12 @@
 }
 
 #horizontalArrow {
-    transform: rotate(-90deg);
-}
-
-#normalArrow {
     transform: rotate(0deg);
 }
 
+#normalArrow {
+    transform: rotate(-90deg);
+}
 
 .sentIndicator {
     display: inline-block;
@@ -73,7 +62,21 @@
 }
 
 .option {
-    display: block;
+    display: list-item;
+    margin-top: -24px;
+    margin-bottom: -3px;
     padding: 0;
+}
+
+.box {
+    background-color: white;
+    display: inline-block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.selectionContainer {
+    padding: 5px 5px 5px 15px;
+    height: 33px;
 }
 
