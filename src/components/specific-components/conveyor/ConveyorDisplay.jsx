@@ -21,7 +21,7 @@ function ConveyorDisplay(props) {
     const [ball2Pos, setBall2Pos] = useEntry("/SmartDashboard/conveyor/ball-2/Position", "ERROR");
     const [ball2Color, setBall2Color] = useEntry("/SmartDashboard/conveyor/ball-2/Color", "ERROR");
 
-    const [isRedAlliance, setIsRedAlliance] = useEntry("/FMSInfo/isRedAlliance", true);
+    const [isRedAlliance, setIsRedAlliance] = useEntry("/FMSInfo/IsRedAlliance", true);
 
     const [leftCompactorSpeed, setLeftCompactorSpeed] = useEntry("/SmartDashboard/conveyor/left-compactor-speed", 0);
     const [rightCompactorSpeed, setRightCompactorSpeed] = useEntry("/SmartDashboard/conveyor/right-compactor-speed", 0);
