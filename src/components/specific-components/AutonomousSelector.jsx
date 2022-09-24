@@ -3,7 +3,7 @@ import SendableChooser from "../general-components/SendableChooser";
 
 function AutonomousSelector(props) {
 
-    const pathToSelector = "/SmartDashboard/Select Autonomous Route/";
+    const pathToSelector = "/SmartDashboard/Choose Auto Route/";
 
     const [defaultSelection] = useEntry(pathToSelector + "/default", '');
     const [activeValue] = useEntry(pathToSelector + 'active', ''); //Active property is the value in the robot code

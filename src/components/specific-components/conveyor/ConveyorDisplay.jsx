@@ -21,6 +21,9 @@ function ConveyorDisplay(props) {
     const [ball2Pos, setBall2Pos] = useEntry("/SmartDashboard/conveyor/ball-2/Position", "ERROR");
     const [ball2Color, setBall2Color] = useEntry("/SmartDashboard/conveyor/ball-2/Color", "ERROR");
 
+    const [ball3Pos, setBall3Pos] = useEntry("/SmartDashboard/conveyor/ball-3/Position", "ERROR");
+    const [ball3Color, setBall3Color] = useEntry("/SmartDashboard/conveyor/ball-3/Color", "ERROR");
+
     const [isRedAlliance, setIsRedAlliance] = useEntry("/FMSInfo/IsRedAlliance", true);
 
     const [leftCompactorSpeed, setLeftCompactorSpeed] = useEntry("/SmartDashboard/conveyor/left-compactor-speed", 0);
@@ -35,6 +38,7 @@ function ConveyorDisplay(props) {
                 <svg  className={"conveyor-display"}>
                     {renderBall(ball1Pos, ball1Color, isRedAlliance)}
                     {renderBall(ball2Pos, ball2Color, isRedAlliance)}
+                    {renderBall(ball3Pos, ball3Color, isRedAlliance)}
 
                     {renderArrows(100, leftCompactorSpeed, rightCompactorSpeed, leftConveyorSpeed, rightConveyorSpeed )}
 
@@ -128,6 +132,7 @@ function renderBall(position, color, isRedAlliance) {
     } else {
         return;
     }
+
 
     return <circle cx={point.x} cy={point.y} r={150} fill={color} stroke={"black"} strokeWidth={2}/>
 }
