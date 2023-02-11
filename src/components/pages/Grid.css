@@ -1,0 +1,26 @@
+.grid {
+    display: flex;
+    flex-shrink: inherit;
+}
+
+.row {
+    display: flex;
+    margin: 8px;
+}
+
+.entry {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    margin-bottom: 0px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+.cone {
+    background-color: yellow;
+}
+
+.cube {
+    background-color: purple;
+}
