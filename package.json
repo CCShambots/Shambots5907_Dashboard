@@ -8,7 +8,6 @@
     "preview": "vite preview --port 8081"
   },
   "dependencies": {
-    "@frc-web-components/frc-web-components": "^3.2.5",
     "bootstrap": "^5.1.3",
     "react": "^18.0.0",
     "react-bootstrap": "^2.4.0",
