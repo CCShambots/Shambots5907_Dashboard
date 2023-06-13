@@ -1,0 +1,22 @@
+.blank-reference-image {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    z-index: 1;
+}
+
+.container {
+    display:inline-block;
+    width:100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+
+}
+
+.light-display {
+    z-index: 2;
+    background: #333333;
+    border: 5px solid white;
+}
+

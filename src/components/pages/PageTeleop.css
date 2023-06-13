@@ -1,0 +1,34 @@
+.mainDisplay {
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.ballCount {
+    color:white;
+    font-size: 350px;
+    display: inline-block;
+    text-align: right;
+    margin: 0 15px 0 0;
+}
+
+.webcamStream {
+    display: inline-block;
+    background-color: white;
+    width: 400px;
+    height:400px;
+}
+
+.legitStream {
+    text-align: center;
+    padding: 40% 0;
+    margin:0;
+}
+
+.statusIndicators {
+    display: flex;
+    justify-content: center;
+}
+

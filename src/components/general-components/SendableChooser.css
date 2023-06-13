@@ -1,0 +1,82 @@
+.root {
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+    margin-bottom: 2px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.normalText {
+    color: #333333;
+    margin: auto;
+    font-size: 15px;
+
+    width: 125px;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+.inlineText {
+    display:inline-block
+}
+
+.arrow {
+    display:inline-block;
+    width: 30px;
+    height:auto;
+    user-select: none;
+
+    transform: translate(100%, 0);
+}
+
+#horizontalArrow {
+    transform: rotate(0deg);
+}
+
+#normalArrow {
+    transform: rotate(-90deg);
+}
+
+.sentIndicator {
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 0px;
+    transform: translate(0, 15%);
+}
+
+#notSent {
+    font-weight: bold;
+    color: red;
+}
+
+.selectionOptions {
+    list-style: none;
+    margin-left: -2em;
+    width: 125px;
+}
+
+.option {
+    display: list-item;
+    margin-top: -24px;
+    margin-bottom: -3px;
+    padding: 0;
+}
+
+.box {
+    background-color: white;
+    display: inline-block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.selectionContainer {
+    padding: 5px 5px 5px 15px;
+    height: 33px;
+}
+
